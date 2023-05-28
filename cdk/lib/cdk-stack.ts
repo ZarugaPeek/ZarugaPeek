@@ -9,8 +9,8 @@ export class CdkStack extends cdk.Stack {
     // AdminTable is partitioned by orgId and sorted by sortKey.
     // With this table, we can get
     // - An organization item by orgId.
-    // - Application items in a Organization sorted by appId.
-    // - Prompt items in an Application sorted by promptVersion.
+    // - Application items in an Organization sorted by appId.
+    // - Prompt items in an Organization (or an Application) sorted by version.
     const adminTable = new dynamodb.Table(this, "DynamoDBTable", {
       // Partition key is a UUID assigned to each organization."
       partitionKey: {
@@ -20,7 +20,7 @@ export class CdkStack extends cdk.Stack {
       // Sort key is automatically assigned to each item based on the kind of item and certain properties.
       // - Organization items: `ORG`
       // - Application items: `APP#${appId}`
-      // - Prompt items: `Prompt#${appId}#${promptVersion}`
+      // - Prompt items: `PRM#${appId}#${version}`
       sortKey: {
         name: "sortKey",
         type: dynamodb.AttributeType.STRING,
