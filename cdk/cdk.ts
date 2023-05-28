@@ -1,8 +1,12 @@
+#!/usr/bin/env node
+import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { Construct } from "constructs";
 import * as dynamodb from "aws-cdk-lib/aws-dynamodb";
 
-export class CdkStack extends cdk.Stack {
+const app = new cdk.App();
+
+class DynamoDBStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
