@@ -10,7 +10,7 @@ const config: StorybookConfig = {
   ],
   framework: "@storybook/nextjs",
   docs: {
-    autodocs: false,
+    autodocs: true,
   },
   webpackFinal: async (config) => {
     config.resolve.alias = {
