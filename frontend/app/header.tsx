@@ -8,6 +8,38 @@ import { Bell } from "lucide-react"
 import { Switcher } from "./switcher"
 
 
+function Navigation({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLElement>) {
+  return (
+    <nav
+      className={cn("flex items-center space-x-4 lg:space-x-6", className)}
+      {...props}>
+      <Link
+        href="/"
+        className="text-sm font-medium transition-colors hover:text-primary">
+        Overview
+      </Link>
+      <Link
+        href="/"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+        Prompt
+      </Link>
+      <Link
+        href="/"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+        Analysis
+      </Link>
+      <Link
+        href="/settings"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
+        Settings
+      </Link>
+    </nav>
+  )
+}
+
 export function Header() {
   return (
     <header className="supports-backdrop-blur:bg-background/60 sticky top-0 z-40 w-full border-b bg-background/95 shadow-sm backdrop-blur">
@@ -19,6 +51,7 @@ export function Header() {
         </Link>
         <span className={"font-mono text-foreground"}>piriwata /</span>
         <Switcher />
+        <Navigation />
 
         <div className="flex flex-1 items-center justify-end space-x-2">
           <div
