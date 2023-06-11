@@ -7,7 +7,6 @@ import { Bell } from "lucide-react"
 
 import { Switcher } from "./switcher"
 
-
 function Navigation({
   className,
   ...props
@@ -32,7 +31,7 @@ function Navigation({
         Analysis
       </Link>
       <Link
-        href="/settings"
+        href="/settings/general"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">
         Settings
       </Link>
