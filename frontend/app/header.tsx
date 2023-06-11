@@ -1,11 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Bell } from "lucide-react"
-
-import { cn } from "@lib/utils"
 import { Avatar } from "@components/ui/avatar"
 import { buttonVariants } from "@components/ui/button"
-import { Switcher } from "./switcher";
+import { cn } from "@lib/utils"
+import { Bell } from "lucide-react"
+
+import { Switcher } from "./switcher"
+
 
 export function Header() {
   return (
@@ -13,16 +14,10 @@ export function Header() {
       <div className="container flex h-16 items-center space-x-4">
         <Link href="/">
           <Avatar className={"h-12 w-12"}>
-            <Image
-              src={"/icon_cubone.png"}
-              alt={"@icon"}
-              fill
-            />
+            <Image src={"/icon_cubone.png"} alt={"@icon"} fill />
           </Avatar>
         </Link>
-        <span className={"font-mono text-foreground"}>
-          piriwata /
-        </span>
+        <span className={"font-mono text-foreground"}>piriwata /</span>
         <Switcher />
 
         <div className="flex flex-1 items-center justify-end space-x-2">
@@ -31,15 +26,9 @@ export function Header() {
               buttonVariants({ size: "sm", variant: "ghost" }),
               "h-12 w-12 cursor-pointer px-0"
             )}>
-            <Bell
-              className={"h-6 w-6"}
-              aria-label={"Notification"}
-            />
+            <Bell className={"h-6 w-6"} aria-label={"Notification"} />
           </div>
         </div>
-      </div>
-      <div className={"container"}>
-        menubar menubar menubar
       </div>
     </header>
   )

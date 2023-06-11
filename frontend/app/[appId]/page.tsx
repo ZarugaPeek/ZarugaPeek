@@ -1,7 +1,3 @@
 export default function ApplicationPage() {
-  return (
-    <div>
-      app page
-    </div>
-  )
+  return <div>app page</div>
 }
