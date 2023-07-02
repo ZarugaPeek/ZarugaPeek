@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Avatar } from "@components/ui/avatar"
-import { buttonVariants } from "@components/ui/button"
-import { cn } from "@lib/utils"
 import { Bell } from "lucide-react"
 
+import { cn } from "@lib/utils"
+import { Avatar } from "@components/ui/avatar"
+import { buttonVariants } from "@components/ui/button"
 import { Switcher } from "./switcher"
 
 function Navigation({

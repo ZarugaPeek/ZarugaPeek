@@ -1,5 +1,4 @@
 import { Separator } from "@components/ui/separator"
-
 import { SidebarNavigation } from "./sidebar"
 
 const sidebarNavItems = [

@@ -1,9 +1,10 @@
 import * as React from "react"
 import Link from "next/link"
+import { Check, ChevronsUpDown } from "lucide-react"
+
+import { cn } from "@lib/utils"
 import { Button } from "@components/ui/button"
 import { Popover, PopoverContent, PopoverTrigger } from "@components/ui/popover"
-import { cn } from "@lib/utils"
-import { Check, ChevronsUpDown } from "lucide-react"
 
 const Switch = ({
   className,
